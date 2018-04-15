@@ -1,21 +1,20 @@
 # homework1
 
-# Corso Cyberfisico univr
-- Autore: Moreno Bragaglio
-- Data: 15/04/2018
+# Cyberfisic course
+- Author: Moreno Bragaglio
+- Date: 15/04/2018
 
-# Esecuzione
-L'esecuzione del programma avviene attraverso l'uso di un launch file situato in "launch/homework1.launch". Per eseguirlo basta lanciare il comando "roslaunch <nome_package> homework1.launch" da terminale.
-Tale launcher si preoccupa di avviare tutti i nodi necessari.
+# Execution
+The execution of the program takes place through the use of a launch file located in "launch/homework1.launch". To run it, just run the command "roslaunch <package_name> homework1.launch" from the terminal. This launcher takes care of tackling all the necessary nodes.
 
-# Progettazione
-Sono stati implementati tre nodi server1, server2, client. I nodi server1 e server2 comunicano con il nodo client il quale a sua volta visualizza a video il risultato del programma. 
+# Planning
+Three nodes (server1, server2, client) have been implemented. The server1 and server2 nodes communicate with the client node which in turn displays the result of the program.
 
 # server1.cpp
-Nodo che pubblica un messaggio (campi: nome, età, corso di studi) alla frequenza di 1Hz sul topic "server1Topic". Tale messaggio è situato al path "msg/messaggio.msg". 
+Node that publishes a message (fields: name, age, course of studies) at the frequency of 1Hz on the topic "server1Topic". This message is located at the "msg/messaggio.msg" path.
 
 # server2.cpp
-Nodo che pubblica (alla frequenza di 1Hz) sul topic "server2Topic" un messaggio composto da una carattere. Tale carattere, digitato da tastiera dall'utente, ha possibilità di essere:
+Node that publishes (at the frequency of 1Hz) on the topic "server2Topic" a message composed of a character. This character, typed by user, can be:
 	a - Print all message
 	c - Print course of study
 	e - Print age
@@ -23,7 +22,7 @@ Nodo che pubblica (alla frequenza di 1Hz) sul topic "server2Topic" un messaggio 
 	q - Exit
  
 # client.cpp 
-Nodo che:
-	- Ascolta il topic "server1Topic" dal quale riceve la stringa completa.
-	- Ascolta il topic "server2Topic" dal quale riceve il carattere per seleziona una parte (completa o no) di stringa.
-	- Stampa il risultato a video alla frequenza di 1Hz.
+Node that:
+	- Listens the topic "server1Topic" from which it receives a complete string. 
+	- Listens the topic "server2Topic" from which it receives a character used to select a part (complete or not) of the string read from "server1Topic". 
+	- Print the result at the frequency of 1Hz.
