@@ -1,0 +1,6 @@
+<launch>
+    <node name="server1" pkg="homework1" type="server1" />
+    <node name="client" pkg="homework1" type="client" output="screen"  />
+    <node name="server2" pkg="homework1" type="server2" output="screen" launch-prefix="xterm -e"/>
+</launch>
+
