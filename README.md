@@ -17,21 +17,15 @@ Node that publishes a message (fields: name, age, course of studies) at the freq
 # server2.cpp
 Node that publishes (at the frequency of 1Hz) on the topic "server2Topic" a message composed of a character. This character, typed by user, can be:
 
-	a - Print all message
-
-	c - Print course of study
-
-	e - Print age
-
-	n - Print name	
-
-	q - Exit
+	- a = Print all message
+	- c = Print course of study
+	- e = Print age
+	- n = Print name	
+	- q = Exit
  
 # client.cpp 
 Node that:
 
 	- Listens the topic "server1Topic" from which it receives a complete string. 
-
 	- Listens the topic "server2Topic" from which it receives a character used to select a part (complete or not) of the string read from "server1Topic". 
-
 	- Print the result at the frequency of 1Hz.
